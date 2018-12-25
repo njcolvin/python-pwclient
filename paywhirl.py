@@ -456,7 +456,7 @@ class PayWhirl:
             A dictionary or list of dictionaries containing invoice
             data, or an error message indicating what went wrong.
         """
-        return self._get(str.format('/invoices/{0}/{1}', customer_id,
+        return self._get(str.format('/invoices/{0}?all={1}', customer_id,
                                     all_invoices))
 
     def process_invoice(self, invoice_id: int) -> Any:
